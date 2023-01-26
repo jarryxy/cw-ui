@@ -8,14 +8,14 @@
 
 <p align="center">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jarryxy/cw-ui">
-    <img src="https://img.shields.io/github/stars/jarryxy/cwUI-demo?style=flat-square&logo=GitHub" alt="stars" />
+    <img src="https://img.shields.io/github/stars/jarryxy/cw-ui-demo?style=flat-square&logo=GitHub" alt="stars" />
     <img alt="GitHub" src="https://img.shields.io/github/license/jarryxy/cw-ui">
 </p>
 
 <p align="center">
   🔥 <a href="">文档网站（国内）todo...</a>
   &nbsp;
-  🌈 <a href="">文档网站（GitHub）todo...</a>
+  🌈 <a href="https://jarryxy.github.io/cw-ui-docs/">文档网站（GitHub）</a>
 </p>
 
 
