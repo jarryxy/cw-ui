@@ -15,11 +15,10 @@
 			@after-leave="onClosed"
 		>
 			<cw-cell
-				:data-option="item"
 				:class="$o.utils.bem('dropdown-item__option', { active: item.value === value })"
 				clickable
 				:icon="item.icon"
-				@tap.native="onOptionTap($event, { option: item })"
+				@tap.native="onOptionTap({ option: item })"
 				v-for="(item, index) in options"
 				:key="item.value"
 			>
@@ -73,8 +72,8 @@ export default {
 	data() {
 		return {
 			transition: true,
-			showPopup: true,
-			showWrapper: true,
+			showPopup: false,
+			showWrapper: false,
 			displayTitle: '',
 			wrapperStyle: '',
 			parentData: {
@@ -83,7 +82,7 @@ export default {
 				activeColor: '',
 				closeOnClickOverlay: '',
 				direction: ''
-			},
+			}
 		};
 	},
 	computed: {
@@ -139,12 +138,11 @@ export default {
 			this.showWrapper = false;
 		},
 
-		onOptionTap(event) {
-			const { option } = event.currentTarget.dataset;
+		onOptionTap({ option }) {
 			const { value } = option;
 			const shouldEmitChange = this.value !== value;
 			this.showPopup = false;
-			this.value = value;
+			this.$emit('input', value);
 			this.$emit('close');
 			this.rerender();
 
