@@ -7,10 +7,10 @@ import {
 } from '../function/validator.js';
 
 const getClassNames = name => ({
-    enter: `cw-${name}-enter cw-${name}-enter-active enter-class enter-active-class`,
-    'enter-to': `cw-${name}-enter-to cw-${name}-enter-active enter-to-class enter-active-class`,
-    leave: `cw-${name}-leave cw-${name}-leave-active leave-class leave-active-class`,
-    'leave-to': `cw-${name}-leave-to cw-${name}-leave-active leave-to-class leave-active-class`
+	enter: `cw-${name}-enter cw-${name}-enter-active enter-class enter-active-class`,
+	'enter-to': `cw-${name}-enter-to cw-${name}-enter-active enter-to-class enter-active-class`,
+	leave: `cw-${name}-leave cw-${name}-leave-active leave-class leave-active-class`,
+	'leave-to': `cw-${name}-leave-to cw-${name}-leave-active leave-to-class leave-active-class`
 });
 
 export function transition(showDefaultValue) {
@@ -21,9 +21,13 @@ export function transition(showDefaultValue) {
 				inited: false,
 				display: false,
 				currentDuration: 0,
-				classes:'',
+				classes: '',
 				status: '',
-				transitionEnded:true
+				transitionEnded: true,
+				tmpConfig: {
+					duration: 3000,
+					name: ''
+				}
 			};
 		},
 		props: {
@@ -60,7 +64,7 @@ export function transition(showDefaultValue) {
 					duration,
 					name
 				} = this
-				const classNames = getClassNames(name);
+				const classNames = getClassNames(this.tmpConfig.name ? this.tmpConfig.name : name);
 				this.currentDuration = isObj(duration) ? duration.enter : duration;
 				this.status = 'enter';
 				this.$emit('before-enter');
@@ -70,7 +74,7 @@ export function transition(showDefaultValue) {
 					}
 
 					this.$emit('enter');
-					
+
 					this.inited = true
 					this.display = true
 					this.classes = classNames.enter
@@ -85,9 +89,9 @@ export function transition(showDefaultValue) {
 							}
 							this.transitionEnded = false;
 							this.classes = classNames['enter-to']
-						},2000);
+						}, 2000);
 					})
-				},2000);
+				}, 2000);
 			},
 
 			leave() {

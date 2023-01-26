@@ -74,6 +74,7 @@ function $parent(name = undefined) {
 	return false
 }
 
+
 module.exports =  {
     bem: bem,
     memoize: memoize,
