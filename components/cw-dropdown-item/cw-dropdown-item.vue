@@ -1,5 +1,5 @@
 <template>
-	<view v-if="showWrapper" :class="$o.utils.bem('dropdown-item', parentData.direction)" :style="wrapperStyle">
+	<view v-if="showWrapper" :class="[$o.utils.bem('dropdown-item', parentData.direction)]" :style="wrapperStyle">
 		<cw-popup
 			:show="showPopup"
 			:custom-style="'position: absolute;' + popupStyle"
@@ -15,7 +15,7 @@
 			@after-leave="onClosed"
 		>
 			<cw-cell
-				:class="$o.utils.bem('dropdown-item__option', { active: item.value === value })"
+				:class="[$o.utils.bem('dropdown-item__option', { active: item.value === value })]"
 				clickable
 				:icon="item.icon"
 				@tap.native="onOptionTap({ option: item })"

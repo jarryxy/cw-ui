@@ -72,6 +72,9 @@ import { GRAY, RED } from '../../libs/function/color.js';
 import { toPromise } from '../../libs/function/common.js';
 
 export default {
+	options: {
+		styleIsolation: 'shared' // 解除样式隔离
+	},
 	mixins: [button, openType],
 	props: {
 		useSlot: Boolean,

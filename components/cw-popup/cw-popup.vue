@@ -16,7 +16,7 @@
 import { transition } from '../../libs/mixin/transition';
 import computed from './index.js';
 
-export default{
+export default {
 	classes: ['enter-class', 'enter-active-class', 'enter-to-class', 'leave-class', 'leave-active-class', 'leave-to-class', 'close-icon-class'],
 	mixins: [computed, transition(false)],
 	props: {
@@ -71,13 +71,13 @@ export default{
 			default: false
 		}
 	},
-	data(){
+	data() {
 		return {
-			tmpConfig:{
-				duration:3000,
-				name:'fade'
+			tmpConfig: {
+				duration: 3000,
+				name: 'fade'
 			}
-		}
+		};
 	},
 	created() {
 		this.observeClass();
@@ -108,22 +108,22 @@ export default{
 				updateData.duration = this.originDuration;
 			}
 
-			this.tmpConfig.name = updateData.name
-			this.tmpConfig.duration = updateData.duration
+			this.tmpConfig.name = updateData.name;
+			this.tmpConfig.duration = updateData.duration;
 		}
 	},
-	watch:{
-		position(){
-			this.observeClass()
+	watch: {
+		position() {
+			this.observeClass();
 		},
-		transition:{
-			handler(){
-				this.observeClass()
-			},
+		transition: {
+			handler() {
+				this.observeClass();
+			}
 			// immediate: true
 		}
 	}
-}
+};
 </script>
 <style lang="scss" scoped>
 @import '../../libs/css/common.scss';

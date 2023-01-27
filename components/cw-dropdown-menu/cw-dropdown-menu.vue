@@ -1,6 +1,6 @@
 <template>
 	<view class="cw-dropdown-menu cw-dropdown-menu--top-bottom">
-		<view :class="$o.utils.bem('dropdown-menu__item', { disabled: item.disabled })" @tap="onTitleTap(index)" v-for="(item, index) in itemListData" :key="index">
+		<view :class="[$o.utils.bem('dropdown-menu__item', { disabled: item.disabled })]" @tap="onTitleTap(index)" v-for="(item, index) in itemListData" :key="index">
 			<view
 				:class="item.titleClass + ' ' + $o.utils.bem('dropdown-menu__title', { active: item.showPopup, down: item.showPopup === (direction === 'down') })"
 				:style="item.showPopup ? 'color:' + activeColor : ''"

@@ -18,6 +18,14 @@ export default {
 	computed:{
 		rootStyle(){
 			const { currentDuration, display, customStyle } = this
+			// if(Object.prototype.toString.call(customStyle) === '[object Object]'){
+			// 	return Object.assign(Object.assign({
+			// 			'-webkit-transition-duration': currentDuration + 'ms',
+			// 			'transition-duration': currentDuration + 'ms'
+			// 		},customStyle),{
+			// 			display: display ? 'block' : 'none',
+			// 		})
+			// }
 			return style([{
 					'-webkit-transition-duration': currentDuration + 'ms',
 					'transition-duration': currentDuration + 'ms'
@@ -25,6 +33,8 @@ export default {
 				display ? null : 'display: none',
 				customStyle
 			]);
+
+
 		}
 	}
 };

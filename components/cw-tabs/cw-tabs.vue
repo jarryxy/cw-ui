@@ -235,7 +235,7 @@ export default {
 				return;
 			}
 
-			groupSetData(this, () => {
+			// groupSetData(this, () => {
 				children.forEach((item, index) => {
 					const active = index === currentIndex;
 
@@ -243,7 +243,7 @@ export default {
 						item.updateRender(active, this);
 					}
 				});
-			});
+			// });
 
 			if (currentIndex === this.currentIndex) {
 				return;

@@ -1,20 +1,21 @@
 <template>
-	<view>
-		<cw-transition
-			:show="show"
-			custom-class="cw-overlay"
-			:custom-style="'z-index: ' + zIndex + '; ' + customStyle"
-			:duration="duration"
-			@tap.native="onClick"
-			@touchmove.native.stop.prevent="noop"
-		>
-			<slot></slot>
-		</cw-transition>
-	</view>
+	<cw-transition
+		:show="show"
+		custom-class="cw-overlay"
+		:custom-style="'z-index: ' + zIndex + '; ' + customStyle"
+		:duration="duration"
+		@tap.native="onClick"
+		@touchmove.native.stop.prevent="noop"
+	>
+		<slot></slot>
+	</cw-transition>
 </template>
 
 <script>
 export default {
+	options: {
+		styleIsolation: 'shared' // 解除样式隔离
+	},
 	props: {
 		show: Boolean,
 		customStyle: String,
@@ -40,7 +41,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../libs/css/common.scss';
 
-.cw-overlay {
+::v-deep .cw-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
