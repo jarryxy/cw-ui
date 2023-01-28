@@ -41,6 +41,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../libs/css/common.scss';
 
+// #ifndef H5
 ::v-deep .cw-overlay {
 	position: fixed;
 	top: 0;
@@ -49,4 +50,17 @@ export default {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
 }
+// #endif
+
+// #ifdef H5
+.cw-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+// #endif
+
 </style>

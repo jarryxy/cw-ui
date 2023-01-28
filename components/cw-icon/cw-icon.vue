@@ -21,8 +21,10 @@ export default {
 			type: String,
 			default: 'cw-icon'
 		},
+		// 图标name | https:// 图标地址
 		name: {
-			type: String
+			type: String,
+			default: ''
 		},
 		customClass: String
 	},

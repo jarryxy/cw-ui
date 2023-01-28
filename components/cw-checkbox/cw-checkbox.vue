@@ -37,8 +37,8 @@ export default {
 	name: 'cw-checkbox',
 	mixins: [computed, mixin],
 	props: {
-		name: [String,Number],
-		value: [String,Number],
+		name: [String,Number,Boolean],
+		value: [String,Number,Boolean],
 		disabled: Boolean,
 		customClass: String,
 		customStyle: [String,Object],
