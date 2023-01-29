@@ -8,7 +8,8 @@
 
 <p align="center">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jarryxy/cw-ui">
-    <img src="https://img.shields.io/github/stars/jarryxy/cw-ui-demo?style=flat-square&logo=GitHub" alt="stars" />
+    <img src="https://img.shields.io/github/stars/jarryxy/cw-ui?style=flat-square&logo=GitHub" alt="stars" />
+    <img src="https://gitee.com/jarryxy/cw-ui/badge/star.svg?theme=dark" alt="stars" />
     <img alt="GitHub" src="https://img.shields.io/github/license/jarryxy/cw-ui">
 </p>
 
@@ -32,6 +33,8 @@
 
 <p align="left">
    <a href="https://gitee.com/chowa/ejyy">e家宜业 Gitee</a>
+   &nbsp;
+   <img src="https://gitee.com/chowa/ejyy/badge/star.svg?theme=dark" alt="stars" />
    &nbsp;
    <a href="https://github.com/chowa/ejyy">e家宜业 Github</a>
    &nbsp;

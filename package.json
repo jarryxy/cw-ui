@@ -1,12 +1,12 @@
 {
   "id": "cw-ui",
   "displayName": "cw-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cw-ui",
   "keywords": [
     "cw-ui"
 ],
-  "repository": "",
+  "repository": "https://github.com/jarryxy/cw-ui",
   "engines": {
     "HBuilderX": "^3.1.0"
   },
@@ -24,9 +24,9 @@
       "qq": ""
     },
     "declaration": {
-      "ads": "",
-      "data": "",
-      "permissions": ""
+      "ads": "无",
+      "data": "无",
+      "permissions": "无"
     },
     "npmurl": ""
   },
@@ -35,8 +35,8 @@
     "encrypt": [],
     "platforms": {
       "cloud": {
-        "tcb": "u",
-        "aliyun": "u"
+        "tcb": "y",
+        "aliyun": "y"
       },
       "client": {
         "Vue": {
